@@ -10,7 +10,7 @@ app.use(express.static(__dirname));
 
 
 app.get('/sendMessage', (req, res) => {
-    res.json('OK');
+    res.send('OK');
 });
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/index.html'));
