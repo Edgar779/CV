@@ -151,16 +151,12 @@
       $.ajax({
 
 	      type: "GET",
-         url: "localhost:3000/sendMessage",
-         headers: { "Accept": "application/json"},
-         crossDomain: true,
-         beforeSend: function(xhr){
-            xhr.withCredentials = true;
-      },
+         url: "/sendMessage",
+         // headers: { "Accept": "application/json"},
+         
          // data: data,
          crossDomain: true,
 	      success: function(msg) {
-            console.log(msg);
             // Message was sent
             if (msg == 'OK') {
                $('#image-loader').fadeOut();
